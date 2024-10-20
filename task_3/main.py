@@ -5,7 +5,9 @@ towers = {
 }
 
 def step(source, target):
-    towers[target].append(towers[source].pop())
+    disk = towers[source].pop()
+    print(f"From {source} to {target}: {disk}")
+    towers[target].append(disk)
     print(f"New state: {towers}")
 
 def move_hanoi(k, source = "A", mid = "B", target = "C"):
